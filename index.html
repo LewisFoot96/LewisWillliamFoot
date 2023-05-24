@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lewis William Foot</title>
+    <title>LWF</title>
+
+    <link rel="icon" type="image/x-icon" href="icons/me.png">
+
+    <style>
+        .container
+        { 
+            /* Flex different system with different rules. Inline, only fits to content */
+            display: flex; 
+            /* Gap between differnt components */
+            gap: 5px;
+            flex-direction: row;    
+            /* Can also do reverse wrap, puts stuff on new line if its too long */
+            flex-wrap: wrap;
+            /* Centering */
+            /* justify-content: center; */
+            /* Fills out content with even spaces inbetween components.  */
+            justify-content: center;
+
+            /* Aliging in middle of box */
+            /* align-items: center; */
+            height: 30vh;
+        }
+
+        .one{
+            background: rebeccapurple;
+            color: aqua;
+            border: 5px solid pink;
+        }
+
+        .two{
+            background: blue;
+            border: 5px solid lightcoral;
+        }
+
+        .three{
+            background-color: orange;
+            border: 5px solid lightseagreen;
+        }
+
+        .flex-item {
+            padding: 5px;
+            width: 200px;
+            height: 150px;
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            text-align: start;
+            }
+    </style>
 </head>
 <body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <!-- Flexible container -->
+        <div class="container">
+            <div class="one flex-item"> 
+                <p>Hello, personal website for latest programming projects and fitness goals.</p>
+            </div>
+            <div class="two flex-item">Two</div>
+            <div class="three flex-item">Three</div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
     
 </body>
 </html>
