@@ -1,0 +1,98 @@
+body
+{
+    background-color: azure;
+}
+.container-flex
+{ 
+    /* Flex different system with different rules. Inline, only fits to content */
+    display: flex; 
+    /* Gap between differnt components */
+    gap: 5px;
+    flex-direction: row;    
+    /* Can also do reverse wrap, puts stuff on new line if its too long */
+    flex-wrap: wrap;
+    /* Centering */
+    margin: 5px;
+    justify-content: center;
+}
+
+.flex-item {
+    background-color: aqua;
+    padding: 2px;
+    width: 100px;
+    height: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: 5px solid lightseagreen;
+    text-align: center;
+    }
+
+    .container-grid 
+    {
+        display: grid;
+        /* Fractional ration, second column is twice the size of the first. Can use the auto key word, fils out avaliable space. 
+        Rows as auto try and fit the content, not the full page*/
+        /* Can use grid-auto-rows that will set number of rows based on tags. */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        /* grid-template-rows: 1fr; */
+        gap: 10px;
+        margin: 20px;
+        justify-items: center;
+    }
+
+    /* Flex boxes within grid. Work well together.*/
+    .grid-item
+    {
+        display: flex;
+        background-color: darkcyan;
+        height: 250px;
+        width: 500px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li{
+        list-style-type: none;
+        text-align: center;
+    }
+
+    a
+    {
+        text-decoration: none;
+    }
+
+    
+    /* 320px — 480px: Mobile devices
+        481px — 768px: iPads, Tablets
+        769px — 1024px: Small screens, laptops
+        1025px — 1200px: Desktops, large screens
+        1201px and more —  Extra large screens, TV */
+
+    /* Mobile devices */
+    @media only screen and (max-width: 600px) {
+        .container-grid 
+        {
+            /* Fractional ration, second column is twice the size of the first. Can use the auto key word, fils out avaliable space. 
+            Rows as auto try and fit the content, not the full page*/
+            /* Can use grid-auto-rows that will set number of rows based on tags. */
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            font-size: 0.8em;
+        }
+
+        .grid-item
+        {
+            height: 150px;
+            width: 250px;
+        }
+    }
+    /* Ipads, tablets */
+    @media only screen and (min-width: 600px) {
+        .grid-item
+        {
+            height: 250px;
+            width: 350px;
+        }               
+    }
