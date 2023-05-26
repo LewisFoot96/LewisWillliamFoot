@@ -51,6 +51,7 @@ body
         width: 500px;
         flex-direction: column;
         text-align: center;
+        padding: 20px;
     }
 
     li{
@@ -61,6 +62,7 @@ body
     a
     {
         text-decoration: none;
+        color: black;
     }
 
     
@@ -96,3 +98,31 @@ body
             width: 350px;
         }               
     }
+
+    #me-header
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container-footer
+    {
+        /* Flex different system with different rules. Inline, only fits to content */
+        display: flex; 
+        /* Gap between differnt components */
+        gap: 5px;
+        flex-direction: row;    
+        /* Can also do reverse wrap, puts stuff on new line if its too long */
+        flex-wrap: wrap;
+        /* Centering */
+        margin: 5px;
+        justify-content: center;
+    }
+
+     /* Flex boxes within grid. Work well together.*/
+     .footer-image
+     {
+         display: flex;
+         height: 150px;
+         width: 300px;
+     }
